@@ -16,6 +16,8 @@
 #include <string>
 #include <ctype.h>
 #include <ctime>
+#include <intrin.h>
+#include <time.h>
 
 using namespace std;
 
@@ -31,44 +33,35 @@ int main()
     SetConsoleOutputCP(1251);
     vector <string> original_text;
     vector <string> result_text;
-    ofstream file_output, file_output_analysis;
-
-    if ((file_output) && (file_output_analysis)) // Проверяем открыт ли файл
     {
         int n = 0; //номер файла
         cout << "Введите номер файла (от 1 до 10): ";
         n = check(n);
-        /*cout<<endl;*/
         original_text = input_words(n);
         if (original_text.size() > 0)
         {
-            unsigned long long start = __rdtsc();//Измеряет время в тактах процессора 
+            unsigned int time_start = clock();
             Sortirovka_Rascheska(original_text);
-            unsigned long long result_time = __rdtsc() - start;//Такты в конце - такты в начале 
-            result_text = original_text; // присваиваем вектору уже отсортированный вектор                
+            unsigned int time_end = clock();
+            result_text = original_text; // присваиваем вектору уже отсортированный вектор   
+            unsigned int result_time = time_end - time_start;
             analysis(result_text, n, result_time);
-
             result_output(result_text, n);
-            file_output_analysis.close(); // Закрытие файла 
-            file_output.close(); // Закрытие файла
         }
         else cout << "Нужных слов нет" << endl;
     }
-    else // Если файл не удалось открыть, тогда выдаем ошибку
-        std::cout << "Файл output или file_output_analysis не открылся!" << std::endl;
 }
 
 int check(int a)
 {
-    while (!(cin >> a) || (a > 10) || (a < 1)) // пока не будет введено целое число до 31 включительно
+    while (!(cin >> a) || (a > 10) || (a < 1))
     {
-        if ((cin.fail()) || (a > 10) || (a < 1)) // если ошибка ввода 
-        {
-            cout << "Повторите попытку ввода " << endl;
-            cin.clear(); // Очищаем буфер ввода 
-            cin.ignore(1000, '\n'); // Убирает новую строку из cin 
-        }
-    } return a; // возвращение функцией числа, прошедшего проверку 
+        cin.clear();                             // очистка буфера
+        while (cin.get() != '\n')                // пока не дошли до конца строки, продолжаем 
+            continue;
+        cout << "Повторите попытку ввода " << endl;        // вывод ошибки на экран
+    }
+    return a;
 }
 
 vector <string> input_words(int n)
@@ -78,52 +71,52 @@ vector <string> input_words(int n)
     {
     case(1):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_1.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_1.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_2.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_2.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_3.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_3.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_4.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_4.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_5.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_5.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_6.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_6.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_7.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_7.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_8.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_8.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_9.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_9.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_10.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_10.txt", ios_base::in);// ввод в  файл 
         break;
     }
     }
@@ -156,7 +149,7 @@ vector <string> input_words(int n)
     }
 }
 
-void Sortirovka_Rascheska(vector<string>& original_text) // data — название вектора  (передаём по ссылке, чтобы вызов comb(array) менял вектор array)
+void Sortirovka_Rascheska(vector<string>& original_text)
 {
     double factor = 1.2473309; // фактор уменьшения
     int step = original_text.size() - 1; // шаг сортировки
@@ -171,7 +164,7 @@ void Sortirovka_Rascheska(vector<string>& original_text) // data — назва�
                 swap(original_text[i], original_text[i + step]);
             }
         }
-        step /= factor;
+        step /= factor;  // step=step/ factor
     }
 }
 
@@ -182,52 +175,52 @@ void analysis(vector <string> result_text, int n, unsigned long long result_time
     {
     case(1):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_1.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_1.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_2.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_2.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_3.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_3.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_4.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_4.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_5.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_5.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_6.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_6.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_7.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_7.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_8.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_8.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_9.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_9.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\original_10.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_10.txt", ios_base::in);// ввод в  файл 
         break;
     }
     }
@@ -237,86 +230,99 @@ void analysis(vector <string> result_text, int n, unsigned long long result_time
     {
     case(1):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_1.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_1.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_2.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_2.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_3.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_3.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_4.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_4.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_5.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_5.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_6.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_6.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_7.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_7.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_8.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_8.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_9.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_9.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\analysis_10.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_10.txt", ios_base::out);// ввод в  файл 
         break;
     }
     }
-    char symbol;
-    while (file_input.get(symbol))
+    if (file_input)
     {
-        file_output_analysis << symbol;
+        char symbol;
+        while (file_input.get(symbol))
+        {
+            file_output_analysis << symbol;
+            /* cout << symbol;*/
+        }
+        file_input.close(); //закрытие файла
+        cout << endl;
+        file_output_analysis << endl << endl;
+        int  k = result_text[result_text.size() - 1].size(); // количество символов в самом коротком слове
+        int count = 0;                                         // счётчик слов
+        file_output_analysis << "Вариант: Латиница,по количеству символов в слове, по убыванию, игнорировать числа, сортировка Расчёской \nВремя сортировки: " << result_time << "мс" << endl << endl;
+        cout << "Вариант: Латиница,по количеству символов в слове, по убыванию, игнорировать числа, сортировка Расчёской \nВремя сортировки: " << result_time << " мс" << endl;
+        cout << endl;
+        cout << "Кол.-во слов в тексте: " << result_text.size();
+        file_output_analysis << "Кол.-во слов в тексте: " << result_text.size() << endl;
+        cout << endl;
+        for (int i = result_text.size() - 1; i >= 0; i--)  // от конца по всему ветору слов
+        {
+            if (result_text[i].size() == k)      // если размер слова равен к, то увеличиваем счётчик
+            {
+                count++;
+            }
+            else
+            {
+                file_output_analysis << "Количество слов размерностью " << k << ": " << count << endl;
+                cout << "Количество слов размерностью " << k << ": " << count << endl;
+                count = 0;
+                k = result_text[i].size();  // присваеваем к новый размер слова
+                i++;
+            }
+        }
+        file_output_analysis << "Количество слов размерностью " << k << ": " << count << endl;
+        cout << "Количество слов размерностью " << k << ": " << count << endl;
     }
-    file_input.close(); //закрытие файла
-    cout << endl;
-    file_output_analysis << endl << endl;
-    int  k = result_text[result_text.size() - 1].size(); // количество символов в самом коротком слове
-    int count = 0;                                         // счётчик слов
-    file_output_analysis << "Вариант: Латиница,по количеству символов в слове, по убывани, игнорировать числа, сортировка Расчёской \nВремя сортировки: " << result_time / 1000 << "сек" << endl << endl;
-    cout << "Вариант: Латиница,по количеству символов в слове, по убывани, игнорировать числа, сортировка Расчёской \nВремя сортировки: " << result_time / 2.50 << " мксек" << endl;
-    cout << endl;
-    for (int i = result_text.size() - 1; i >= 0; i--)  // от конца по всему ветору слов
+    else // Если файл не удалось открыть, тогда выдаем ошибку
     {
-        if (result_text[i].size() == k)      // если размер слова равен к, то увеличиваем счётчик
-        {
-            count++;
-        }
-        else
-        {
-            file_output_analysis << "Количество слов размерностью " << k << ": " << count << endl;
-            cout << "Количество слов размерностью " << k << ": " << count << endl;
-            count = 0;
-            k = result_text[i].size();  // присваеваем к новый размер слова
-            i++;
-        }
+        cout << "Файл input не открылся!" << std::endl;
+        file_input.close(); // Закрытие файла 
     }
-    file_output_analysis << "Количество слов размерностью " << k << " " << count << endl;
-    cout << "Количество слов размерностью " << k << ": " << count << endl;
 }
+
 
 void result_output(vector <string> result_text, int n)
 {
@@ -325,58 +331,58 @@ void result_output(vector <string> result_text, int n)
     {
     case(1):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_1.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_1.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_2.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_2.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_3.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_3.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_4.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_4.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_5.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_5.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_6.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_6.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_7.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_7.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_8.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_8.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_9.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_9.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\result_10.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_10.txt", ios_base::out);// ввод в  файл 
         break;
     }
     }
-
-    for (int i = 0; i < result_text.size(); i++)
     {
-        file_output << result_text[i] << endl;
+        for (int i = 0; i < result_text.size(); i++)
+        {
+            file_output << result_text[i] << endl;
+        }
     }
-}
