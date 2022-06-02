@@ -71,52 +71,52 @@ vector <string> input_words(int n)
     {
     case(1):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_1.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_1.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_2.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_2.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_3.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_3.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_4.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_4.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_5.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_5.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_6.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_6.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_7.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_7.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_8.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_8.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_9.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_9.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_10.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_10.txt", ios_base::in);// ввод в  файл 
         break;
     }
     }
@@ -175,52 +175,52 @@ void analysis(vector <string> result_text, int n, unsigned long long result_time
     {
     case(1):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_1.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_1.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_2.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_2.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_3.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_3.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_4.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_4.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_5.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_5.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_6.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_6.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_7.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_7.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_8.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_8.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_9.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_9.txt", ios_base::in);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_input.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Texts\\original_10.txt", ios_base::in);// ввод в  файл 
+        file_input.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Texts\\original_10.txt", ios_base::in);// ввод в  файл 
         break;
     }
     }
@@ -230,52 +230,52 @@ void analysis(vector <string> result_text, int n, unsigned long long result_time
     {
     case(1):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_1.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_1.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_2.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_2.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_3.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_3.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_4.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_4.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_5.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_5.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_6.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_6.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_7.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_7.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_8.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_8.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_9.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_9.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Analysis\\analysis_10.txt", ios_base::out);// ввод в  файл 
+        file_output_analysis.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Analysis\\analysis_10.txt", ios_base::out);// ввод в  файл 
         break;
     }
     }
@@ -331,52 +331,52 @@ void result_output(vector <string> result_text, int n)
     {
     case(1):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_1.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_1.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(2):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_2.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_2.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(3):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_3.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_3.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(4):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_4.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_4.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(5):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_5.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_5.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(6):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_6.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_6.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(7):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_7.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_7.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(8):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_8.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_8.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(9):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_9.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_9.txt", ios_base::out);// ввод в  файл 
         break;
     }
     case(10):
     {
-        file_output.open("C:\\Users\\hikao\\Desktop\\УЧЕБНАЯ ПРАКТИКА\\Учебная практика\\Results\\result_10.txt", ios_base::out);// ввод в  файл 
+        file_output.open("C:\\Users\\hikao\\Desktop\\Практика учебная\\Results\\result_10.txt", ios_base::out);// ввод в  файл 
         break;
     }
     }
@@ -386,3 +386,4 @@ void result_output(vector <string> result_text, int n)
             file_output << result_text[i] << endl;
         }
     }
+}
